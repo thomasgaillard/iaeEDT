@@ -1,4 +1,4 @@
 iaeEDT
 ======
 
-Emploi du temps non officiel de la Licence 3 SI-INFO de l'IAE Savoie Mont-Blanc
+Emploi du temps non officiel de la licence 3 SI de l'IAE Savoie Mont-Blanc
