@@ -19,7 +19,9 @@ $.ajax({
 });
 
 
-$("#l3INFO").click(function(){
+$("#l3INFO").click(function(e){
+	e.preventDefault();
+	$('#content').empty();
 	$("#l3GI").removeClass('active');
 	$("#l3INFO").addClass('active');
 	$.ajax({
@@ -33,7 +35,9 @@ $("#l3INFO").click(function(){
 	});
 });
 
-$("#l3GI").click(function(){
+$("#l3GI").click(function(e){
+	e.preventDefault();
+	$('#content').empty();
 	$("#l3INFO").removeClass('active');
 	$("#l3GI").addClass('active');
 	$.ajax({
@@ -81,14 +85,14 @@ function generateImg(week){
 	var sp5DisplayConfId = splitLinkImg[11]; //bug - until 19PM
 	var pianoDay = '0%2C1%2C2%2C3%2C4';
 	var width = $('#content').width();
-	var height = $('#content').height()-44;
+	var height = $('#content').height();
 	
 	//rebuild string with params	
 	linkImg=String(sp0Url+"&"+project+"&idPianoWeek="+sp1PianoWeek+"&idPianoDay="+pianoDay+"&"+tree+"&width="+width+"&height="+height+"&"+sp2LunchName+"&"+sp3DisplayMode+"&showLoad=false"+"&"+sp4Ttl+"&"+"displayConfId=26");
 	//insert img into div
 	$('#content').fadeOut('fast');
 	$('#content').empty();
-	$('#content').append("<img src='"+linkImg+"' width='100%' height='100%'/>");
+	$('#content').append("<img src='"+linkImg+"'/>");
 	$('#content').fadeIn('slow');
 };
 
@@ -105,52 +109,14 @@ $(document).keydown(function(e){
 	}
 });
 
-$("#prev").click(function(){
+$("#prev").click(function(e){
+	e.preventDefault();
 	currentWeek--;	
 	generateImg(currentWeek);
 });
 
-$("#next").click(function(){
+$("#next").click(function(e){
+	e.preventDefault();
 	currentWeek++;	
 	generateImg(currentWeek);
 });
-
-//hackto prevent "guirlande de noel" under non-small device ouchhhhh
-if($('#content').width() < 722){
-	var previousOrientation = 0;
-	var checkOrientation = function(){
-		if(window.orientation !== previousOrientation){
-			previousOrientation = window.orientation;
-			generateImg(currentWeek);
-		}
-	};
-	
-	window.addEventListener("resize", checkOrientation, false);
-	window.addEventListener("orientationchange", checkOrientation, false);
-}
-// (optional) Android doesn't always fire orientationChange on 180 degree turns
-setInterval(checkOrientation, 2000);
-
-
-
-
-
-var el = document.getElementById('fullscreenBtn');
-	if(el){
-		el.addEventListener('click', function(e){
-			
-			
-			var docElm = document.body;
-			if (docElm.requestFullscreen) {
-			    docElm.requestFullscreen();
-			}
-			else if (docElm.mozRequestFullScreen) {
-			    docElm.mozRequestFullScreen();
-			}
-			else if (docElm.webkitRequestFullScreen) {
-			    docElm.webkitRequestFullScreen();
-			}
-			
-			
-		}, false );
-	}
