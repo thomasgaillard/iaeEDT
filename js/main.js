@@ -11,7 +11,7 @@ var doc = "";
 
 //get data
 $.ajax({
-	url: "http://eppur-creation.com/edt/queries.php",
+	url: "http://edt.thomasgaillard.com/queries.php",
 	success: function(data){
 		doc = data;
 		generateImg();
@@ -26,7 +26,7 @@ $("#l3INFO").click(function(e){
 	$("#l3INFO").addClass('active');
 	$.ajax({
 		type: "POST",
-		url: "http://eppur-creation.com/edt/queries.php",
+		url: "http://edt.thomasgaillard.com/queries.php",
 		data: "branchId=3418",
 		success: function(data){
 			doc = data;
@@ -42,7 +42,7 @@ $("#l3GI").click(function(e){
 	$("#l3GI").addClass('active');
 	$.ajax({
 		type: "POST",
-		url: "http://eppur-creation.com/edt/queries.php",
+		url: "http://edt.thomasgaillard.com/queries.php",
 		data: "branchId=3348",
 		success: function(data){
 			doc = data;
