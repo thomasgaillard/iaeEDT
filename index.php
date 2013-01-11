@@ -40,6 +40,7 @@
 	<link href="img/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 	<link href="img/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
+	<link rel="stylesheet" href="css/add2home.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min"></script>
