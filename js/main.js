@@ -19,15 +19,15 @@ $.ajax({
 });
 
 
-$("#l3INFO").click(function(e){
+$("#m1mti").click(function(e){
 	e.preventDefault();
 	$('#content').empty();
-	$("#l3GI").removeClass('active');
-	$("#l3INFO").addClass('active');
+	$("#m1mdi").removeClass('active');
+	$("#m1mti").addClass('active');
 	$.ajax({
 		type: "POST",
 		url: "http://edt.thomasgaillard.com/queries.php",
-		data: "branchId=3418",
+		data: "branchId=3268",
 		success: function(data){
 			doc = data;
 			generateImg();
@@ -35,15 +35,15 @@ $("#l3INFO").click(function(e){
 	});
 });
 
-$("#l3GI").click(function(e){
+$("#m1mdi").click(function(e){
 	e.preventDefault();
 	$('#content').empty();
-	$("#l3INFO").removeClass('active');
-	$("#l3GI").addClass('active');
+	$("#m1mti").removeClass('active');
+	$("#m1mdi").addClass('active');
 	$.ajax({
 		type: "POST",
 		url: "http://edt.thomasgaillard.com/queries.php",
-		data: "branchId=3348",
+		data: "branchId=3187",
 		success: function(data){
 			doc = data;
 			generateImg();

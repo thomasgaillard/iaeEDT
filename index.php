@@ -62,8 +62,8 @@
 	<div id="container">
 		<nav id="main-nav">
 			<ul>
-				<li id="l3INFO" <?php if($eltActif != 'gi') echo 'class="active"'; ?>><a href="#">info</a></li>
-				<li id="l3GI" <?php if($eltActif == 'gi') echo 'class="active"'; ?>><a href="#">gi</a></li>
+				<li id="m1mti" <?php if($eltActif != 'gi') echo 'class="active"'; ?>><a href="#">MTI</a></li>
+				<li id="m1mdi" <?php if($eltActif == 'gi') echo 'class="active"'; ?>><a href="#">MDI</a></li>
 			</ul>
 		</nav>
 		<div id="main" role="main">

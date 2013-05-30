@@ -4,7 +4,7 @@
 	if(isset($_POST['branchId']) && $_POST['branchId'] != "")
 		$_SESSION['branchId'] = $_POST['branchId'];
 	elseif(!isset($_SESSION['branchId']) || $_SESSION['branchId'] == "")
-			$_SESSION['branchId'] = 3418;//default : L3 SI-INFO
+			$_SESSION['branchId'] = 3268;//default : M1 MTI
 
 	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_URL, "http://ade52-savoie.grenet.fr/ade/custom/modules/plannings/direct_planning.jsp?projectId=4&login=ETUDIANT&password=etsa");
